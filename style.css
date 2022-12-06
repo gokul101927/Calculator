@@ -1,0 +1,70 @@
+
+.container {
+   display: flex;
+   min-height: 95vh;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden;
+   background: linear-gradient(hsl(202, 61%, 43%) 13%, hsl(178, 69%, 75%));
+}
+
+.calculator {
+    background-color: hsl(201, 37%, 89%);
+    display: grid;
+    gap: 2px;
+    width: 426px;
+    height: 531px;
+    border-radius: 5px;
+    box-shadow: 1em;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    border: 10px solid hsl(201, 37%, 89%);
+}
+
+.display {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    font-size: 5em;
+    font-weight: initial;
+    text-shadow: 1.3px 1.3px #383838;
+    margin: 5px 0px;
+    border-radius: 5px;
+    background-color: hsl(203, 74%, 83%);
+    overflow: hidden;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 2px solid hsl(203, 74%, 83%);
+    transition: background-color ease-out 100ms;
+    cursor: pointer;
+}
+
+.operand:hover {
+   background-color: hsl(203, 74%, 83%);
+}
+
+.operator:hover {
+    background-color: hsl(178, 70%, 80%);
+    border: 2px solid hsl(178, 70%, 80%);
+}
+
+.clear:active {
+    background-color: hsl(15, 76%, 59%);
+    border: 2px solid hsl(15, 76%, 59%);
+}
+
+.percent:active, .sign:active, .equals:active, .decimal:active {
+    background-color: hsl(178, 70%, 80%);
+    border: 2px solid hsl(178, 70%, 80%);
+}
+
+
+.equals {
+    grid-column: span 2;
+}
